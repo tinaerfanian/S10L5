@@ -1,0 +1,153 @@
+/* WeatherComp.css */
+
+/* Body che utilizza Flexbox per centrare il contenuto */
+body {
+    font-family: 'Roboto', sans-serif;  /* Font più moderna */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra orizzontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh; /* Imposta l'altezza per occupare l'intera altezza della finestra */
+  }
+  
+  /* Contenitore principale del componente WeatherComp */
+  .weatherComp-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Aggiungi un leggero sfondo semi-trasparente */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 500px; /* Limita la larghezza massima */
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 3em;
+  }
+  
+  /* Aggiungi un po' di spaziatura sopra l'header */
+  .weatherApp {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 2px;
+  }
+
+
+  /* Icona meteo */
+.weather-icon {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    display: block;
+    margin-top: -10px;
+    animation: bounce 1.5s infinite;  /* Aggiungi l'animazione di rimbalzo */
+    padding-top: 1em;
+  }
+  
+  /* Animazione bounce per emoji */
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Stile per la barra di ricerca */
+  input[type="text"] {
+    padding: 15px;
+    font-size: 18px;
+    width: 250px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  input[type="text"]:focus {
+    border: 2px solid #4caf50;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Stile per il bottone di ricerca */
+  button {
+    padding: 15px 25px;
+    font-size: 18px;
+    background-color: #10a8e4;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    border-radius: 10px !important;
+    font-weight: bold !important;
+  }
+  
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  button:active {
+    transform: translateY(1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Stile per la visualizzazione dei dati meteo */
+  .NomeCitta {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+  }
+  
+  p {
+    font-size: 1.3rem;
+    margin: 5px 0;
+  }
+  
+  /* Sezione meteo */
+  .weather-info {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .weather-info p {
+    font-size: 1.5rem;
+  }
+  
+  .enter {
+    font-size: 1.2rem;
+    color: #f2f2f2;
+    font-style: italic;
+    margin-top: 1rem;
+    opacity: 0.8;
+  }
+  
+  /* Responsività */
+  @media (max-width: 768px) {
+    .weatherApp {
+      font-size: 2rem;
+    }
+    .emoji {
+      font-size: 100px;
+    }
+    input[type="text"] {
+      width: 200px;
+    }
+    button {
+      padding: 12px 20px;
+    }
+  }
+  
